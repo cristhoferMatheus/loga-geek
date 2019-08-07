@@ -1,0 +1,163 @@
+/* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .jssorb051 .i {position:absolute;cursor:pointer;}
+        .jssorb051 .i .b {fill:white;fill-opacity:0.5;}
+        .jssorb051 .i:hover .b {fill-opacity:.7;}
+        .jssorb051 .iav .b {fill-opacity: 1;}
+        .jssorb051 .i.idn {opacity:.3;}
+
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+	
+
+/*button*/
+button {
+  float:right;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0px;
+  margin: -153px 10px;
+  border: none;
+  cursor: pointer;
+  width: 11%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*button2*/
+.cd {
+  float:right;
+  background-color: red;
+  color: white;
+  padding: 10px 0px;
+  margin: -153px 252px;
+  border: none;
+  cursor: pointer;
+  width: 13%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a{
+	text-decoration:none;
+}
+
+.marg{
+	margin:33px;
+}
+
+/* input */
+input{
+  margin-left:44%;	
+  margin-top:-50px;	
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 41px;
+  font-size: 19px;
+  background-color: #eca0a0;
+  background-image: url('lupa.png');
+  padding: 12px 20px 12px 40px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+  width: 25%;
+}	
+
+.logo{
+	float:left;
+}
+
+/*menu*/
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 13px;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.topnav a {
+  float:left;
+  margin-top:77px;	
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 26px 87px;
+}
+
+.topnav a:hover {
+  background-color: red;
+   opacity:0.5;
+}
+
+/*anuncio*/
+.anun{
+background-color:blue;
+width:272px;
+height:600px;
+float:left;
+margin-top:-10px;
+}	
+
+/*gridem*/
+.grid-container {
+  float:right;
+  width:1591px;
+  display: grid;
+  grid-gap: 50px 33px;
+  grid-template-columns: auto auto auto;
+  background-color: #909090;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  width:auto;
+  height:auto;
+  padding:8px;
+}
+
+img{
+	width:250px;
+	height:250px;
+}
+
+h2{
+text-align:center;}
+
+body {
+  margin: 0;
+ }

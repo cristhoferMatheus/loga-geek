@@ -1,0 +1,174 @@
+body{
+	margin:0;
+}
+a {
+	font-family: italic;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	transition: all 0.4s;
+	
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fc00ff;
+  border-color: #fc00ff;
+}
+/**/
+p {
+	font-family: italic;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+/**/
+input {
+	border: none;
+}
+
+textarea {
+  border: none;
+}
+
+label {
+  display: block;
+  margin: 0;
+}
+/**/
+button {
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+
+/**/
+.txt1 {
+  font-family: italic;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.5;
+}
+
+.bo1 {border-bottom: 1px solid #999999;}
+/**/
+.container-login {
+  width: 100%;  
+  min-height: 100vh;
+  align-items: center;
+  padding: 15px;
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
+}
+.wrap-login {
+  width: 772px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin-left:270px;
+  margin-top:35px;
+}
+
+/**/
+.login-form {
+  width: 100%;
+}
+
+.login-form-title {
+  width: 100%;
+  display: block;
+  font-family: italic;
+  font-size: 39px;
+  color: #555555;
+  line-height: 1.2;
+  text-align: center;
+}
+/**/
+.wrap-input {
+  width: 90%;
+  margin-left:37px;
+  margin-top:10px;
+  margin-bottom:15px;
+  position: relative;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+/**/
+.input {
+  font-family: italic;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 60px;
+  padding: 0 20px;
+}
+/**/
+.container-login-form-btn {
+  width: 80%;
+  padding-bottom:32px;
+  padding-left:77px;
+}
+
+.login-form-btn {
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 60px;
+  background-color: #333333;
+  border-radius: 10px;
+
+  font-family: italic;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.login-form-btn::before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background: #a64bf4;
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  transition: all 0.4s;
+}
+
+.login-form-btn:hover:before {
+  opacity: 1;
+}
+
+
+/**/
+.p{
+	text-align:center;
+}
+/**/

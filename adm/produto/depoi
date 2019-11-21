@@ -1,0 +1,1 @@
+<--<img height="130" width="130" src="<?php echo $this->base_url."img/".$produtos->getImg(); ?>"></td>-->

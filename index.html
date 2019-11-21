@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include_once '../adm/classes/autoload.php';
+
+$produtoDao = new ProdutoDao();
+$lista = $produtoDao->select();
+
+$a = $lista;
+?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <link rel="stylesheet" type="text/css" href="css/geek.css">
 <script src="js/jssor.slider.min.js" type="text/javascript"></script>
@@ -8,64 +17,69 @@
 
 
 <nav class="topnav">
-<img class="logo" src="img/geek.jpg" style="width:374px;height:242px">
- <a class="active" href="#home">Home</a>
- <a href="#news">News</a>
+<img class="logo" src="img/logos/logo1.png" style="width:270px;height:150px">
+ <a class="active" href="index.html">Home</a>
+ <a href="news.php">News</a>
  <a href="#contact">Contact</a>
- <a href="#imagens">imagens</a>
+ <a href="galeria.html">Imagens</a>
   
 </nav>
-<button><a href="registros/login.html">login</a></button>
-<button class="cd"><a href="registros/cadastro.html">cadastra-se</a></button>
+<a href="login.php"><button class="lo">Login</button></a>
+<a href="cadastro-cliente.php"><button class="cd">Cadastra-se</button></a>
 
 <input type="text" name="search" placeholder="Search....">
 </head>
 
 <body>
+
+<div class="carrinho">
+<a href="3nao sei"><img class="img" src="img/icones/carro.png"/></a>
+</div>
+
 <section>    
 
     <script type="text/javascript" src="js/geek.js"></script>
 	
-   <h2 class="marg">destaques</h2>
+   <h2 class="marg">Destaques</h2>
 	
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:390px;overflow:hidden;visibility:hidden;">
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:390px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/" />
         </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:380px;overflow:hidden;">
             <div>
-                <img data-u="image" src="img/001.jpg" />
+                <img data-u="image" src="img/roupas/camisa1.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/002.jpg" />
+                <img data-u="image" src="img/acessorios/bone2.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/003.jpg" />
+                <img data-u="image" src="img/roupas/camisa4.jpg" />
+            </div>
+			<div>
+            <img data-u="image" src="img/action/ac.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/004.jpg" />
+                <img data-u="image" src="img/acessorios/bone6.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/005.jpg" />
+                <img data-u="image" src="img/roupas/camisa3.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/006.jpg" />
+                <img data-u="image" src="img/acessorios/bone1.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/007.jpg" />
+                <img data-u="image" src="img/action/ac4.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/009.jpg" />
+                <img data-u="image" src="img/acessorios/bone.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/010.jpg" />
+                <img data-u="image" src="img/roupas/moleton.jpg" />
             </div>
             <div>
-                <img data-u="image" src="img/015.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/022.jpg" />
+                <img data-u="image" src="img/action/ac2.jpg" />
             </div>
         </div>
         <!-- Bullet Navigator -->
@@ -93,43 +107,97 @@
 	
 </section>
 <section>
-	<h2>novos produtos:</h2>
+	<h2>Novos Produtos:</h2>
 
   <div class="grid-container">
   <div class="grid-item">
-	<img src="img/022.jpg">
+	<img src="img/roupas/camisa4.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 55,99</p>
+	
+	<a href="view_produt.php?id='<?php $a->getId();?>'">detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div>
   
   <div class="grid-item">
-	<img src="img/022.jpg">
+	<img src="img/action/ac1.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 50,00 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div>
   
   <div class="grid-item">
-	<img src="img/022.jpg">
+	<img src="img/acessorios/bone2.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 24,99 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div> 
   
   <div class="grid-item">
-  	<img src="img/022.jpg">
+  	<img src="img/roupas/camisa2.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 52,30 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div>
   
   <div class="grid-item">
- 	<img src="img/022.jpg">
+ 	<img src="img/acessorios/bone5.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 15,40 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div>
   
   <div class="grid-item">
-  	<img src="img/022.jpg">
+  	<img src="img/action/ac3.jpg">
 	
-	<p>sla </p>
+	<p>Preço: R$ 26,30 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
+  </div>
+
+  <div class="grid-item">
+  	<img src="img/acessorios/bone4.jpg">
+	
+	<p>Preço: R$ 22,30 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
+  </div>  
+  
+  <div class="grid-item">
+  	<img src="img/roupas/moleton1.jpg">
+	
+	<p>Preço: R$ 36,40 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
+  </div>
+  
+  <div class="grid-item">
+  	<img src="img/action/ac4.jpg">
+	
+	<p>Preço: R$ 32,99 </p>
+	
+	<p>detalhes</p>
+	
+	<button class="compra">comprar</button>
   </div>
 </div>
 	</section>

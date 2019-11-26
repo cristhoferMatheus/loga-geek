@@ -31,15 +31,14 @@
 	
 
 /*button*/
-button {
+.lo {
   float:right;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #ffffff;
   padding: 10px 0px;
-  margin: -153px 10px;
+  margin: -90px 11px;
   border: none;
   cursor: pointer;
-  width: 11%;
+  width: 10%;
 }
 
 button:hover {
@@ -49,13 +48,12 @@ button:hover {
 /*button2*/
 .cd {
   float:right;
-  background-color: red;
-  color: white;
+  background-color: #ffffff;
   padding: 10px 0px;
-  margin: -153px 252px;
+  margin: -90px 190px;
   border: none;
   cursor: pointer;
-  width: 13%;
+  width: 10%;
 }
 
 button:hover {
@@ -72,9 +70,9 @@ a{
 
 /* input */
 input{
-  margin-left:44%;	
+  margin-left:40%;	
   margin-top:-50px;	
-  width: 200px;
+  width: 300px;
   box-sizing: border-box;
   border: 2px solid red;
   border-radius: 41px;
@@ -84,13 +82,8 @@ input{
   padding: 12px 20px 12px 40px;
   background-position: 10px 10px; 
   background-repeat: no-repeat;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
 }
 
-input:focus {
-  width: 25%;
-}	
 
 .logo{
 	float:left;
@@ -101,18 +94,17 @@ input:focus {
 .topnav {
   list-style-type: none;
   margin: 0;
-  padding: 13px;
   overflow: hidden;
-  background-color: #121212;
+  background-color: #070707;
 }
 
 .topnav a {
   float:left;
-  margin-top:77px;	
+  margin-top:38px;	
   display: block;
   color: white;
   text-align: center;
-  padding: 26px 87px;
+  padding: 26px 79px;
 }
 
 .topnav a:hover {
@@ -123,7 +115,7 @@ input:focus {
 /*anuncio*/
 .anun{
 background-color:blue;
-width:272px;
+width:276px;
 height:600px;
 float:left;
 margin-top:-10px;
@@ -132,11 +124,11 @@ margin-top:-10px;
 /*gridem*/
 .grid-container {
   float:right;
-  width:1591px;
+  width:80%;
   display: grid;
   grid-gap: 50px 33px;
   grid-template-columns: auto auto auto;
-  background-color: #909090;
+  background-color: #632e2e;
   padding: 20px;
 }
 
@@ -155,9 +147,39 @@ img{
 	height:250px;
 }
 
+.img{
+	 width:50px;
+	 height:50px;	
+}
+
 h2{
 text-align:center;}
 
 body {
   margin: 0;
  }
+ 
+/**/
+ .carrinho{
+	 background-color:red;
+	 right:0.2%;
+	 position:fixed;
+	 border-radius: 50%;
+ }
+ 
+a{
+	 font-size:20px;
+}
+
+p{
+	 font-size:30px;
+}
+
+.compra{
+	width:87px;
+	height:36px;
+}
+
+
+ 
+ 

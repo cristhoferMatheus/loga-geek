@@ -121,13 +121,18 @@ float:left;
 margin-top:-10px;
 }	
 
+.anun img{
+	width:276px;
+height:600px;
+}
+
 /*gridem*/
 .grid-container {
   float:right;
   width:80%;
   display: grid;
   grid-gap: 50px 33px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   background-color: #632e2e;
   padding: 20px;
 }
@@ -137,8 +142,6 @@ margin-top:-10px;
   border: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 30px;
   text-align: center;
-  width:auto;
-  height:auto;
   padding:8px;
 }
 
@@ -180,6 +183,7 @@ p{
 	height:36px;
 }
 
-
+.c{width:10%px;
+	height:36%;}
  
  

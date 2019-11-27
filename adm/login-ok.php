@@ -11,13 +11,14 @@ if (isset($_POST['senha']) && isset($_POST['login'])
     $usuario->setLogin($_POST['login']);
     $usuario->setSenha(md5($_POST['senha']));
 
-    $login = new Login();
-    $login = $login->verificaLogin($usuario);
+
+    $loginUser = new LoginUser();
+    $loginUser = $loginUser->verificaLoginUser($usuario);
     
-    if($login){
-        header('Location:adm/index.html');
+    if($loginUser){
+        header('Location:index.html');
     } else {
-        header('Location:adm/login.php');
+        header('Location:login.php');
     }
     
 } else {

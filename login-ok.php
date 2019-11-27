@@ -1,26 +1,28 @@
 <?php
 session_start();
-include_once 'adm/classes/autoload.php';
-include_once 'adm/classes/ClienteDao.php';
+include_once 'classes/autoload.php';
+include_once 'classes/UsuarioDao.php';
 
 if (isset($_POST['senha']) && isset($_POST['login']) 
-        && $_POST['senha'] != "" && md5($_POST['login'] != "")) {
-   
-   $cliente = new Cliente();
-    $cliente->setLogin($_POST['login']);
-    $cliente->setSenha($_POST['senha']);
-
-    $login = new Login();
-    $login = $login->verificaLogin($cliente);
+        && $_POST['senha'] != "" && $_POST['login'] != "") {
     
-    if($login){
+	
+	$usuario = new Usuario();
+    $usuario->setLogin($_POST['login']);
+    $usuario->setSenha(md5($_POST['senha']));
+
+
+    $loginUser = new LoginUser();
+    $loginUser = $loginUser->verificaLoginUser($usuario);
+    
+    if($loginUser){
         header('Location:index.html');
     } else {
         header('Location:login.php');
     }
     
 } else {
-    $msg = "preencha  todos os campos";
+    $msg = "Preencha todos os campos";
     echo $msg;
 }
 ?>

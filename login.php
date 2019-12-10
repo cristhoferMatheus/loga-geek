@@ -1,29 +1,25 @@
-<html>	
-	<body class="cor">
-			<section class="">
-
-			
-					<div class="form">
-						<form role="form" method="POST" action="login-ok.php">
-							
-								<label for="user">Insira seu login:</label>
-								<input type="login" class="" placeholder="login"  name="login" />
-						
-								<p>
-							
-								<label for="senha" >Insira sua senha:</label>
-								<input type="senha" class="" placeholder="senha" name="senha"/>
-								
-								<p>
-								
-								<button type="submit" name="ana" value="ana" class="">Iniciar sessão</button>
-								
-	
-						</form>
-					</div>			
-	
-			</section>
-	</body>
+<html>
+    <section id="contato">
+        <h2> Conecte-se:</h2>
+        <div class="form">
+            <form  method="POST" action="login-ok.php"> 
+                <label for="login">Login:</label>
+                <input type="login" id="login" name="login" placeholder="Insira seu login">
+					
+					<p>
+					
+                <label for="Senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+					<p>
+					
+                <button class="button" type="submit"> Entrar </button>
+            </form>
+        </div>
+     </section>
+    
+    <footer> 
+    </footer>
+</body>
 </html>
 
 <style>

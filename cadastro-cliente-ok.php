@@ -34,7 +34,7 @@ if (isset($_POST['nome']) && $_POST['nome'] != ""
     <section class="conteiner">
 		<img src="sucesso.png">
         <h2> Sucesso ao cadastrar!</h2>
-		<button><a href="index.html">Voltar</a></button>
+		<button><a href="index.php">Voltar</a></button>
      </section>
     
     <footer> 

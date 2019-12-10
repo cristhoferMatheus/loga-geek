@@ -1,36 +1,32 @@
 <?php
 include_once 'adm/classes/autoload.php';
 
-$id = new Produto;
-$id->setId($_GET['id']);
+    $produto = new Produto();
+    $produto->setId($_GET['id']);
 
-$produtoDao = new ProdutoDao();
-$lista = $produtoDao->selectById($id);
-
-var_dump($lista);
+    $produtoDao = new ProdutoDao();
+    $lista = $produtoDao->selectById($produto);
 
 ?>
-<header style="height:100px"></header>
-<section class="bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto" >
-                <h1 class="text-center cor">
-
-                    <?php echo $lista->getNome() ?></h1>
+<header style="height:50px"></header>
+<section>
+    <div >
+        <div>
+            <div >
+                <h1>Nome: <?php echo $lista->getNome() ?></h1>
                 
-					<?php echo $lista->getCategoria() ?>
+					<p>Categoria: <?php echo $lista->getCategoria() ?><p>
 				 
-					<?php echo $lista->getDescricao() ?>
+					<p>Descrição: <?php echo $lista->getDescricao() ?><p>
 					
-					<?php echo $lista->getUnidades() ?>
+					<p>Unidades: <?php echo $lista->getUnidades() ?><p>
 					
 					
-                    <img src="<?php echo $lista->getLinks(); ?>">
+                    <img src="img/novos/<?php echo $lista->getImg(); ?>"><p>
                         
-                    <?php echo $lista->getPreco() ?>
+                    <p>Preço: R$<?php echo $lista->getPreco() ?><p>
                         
-                        <center><a href="<?php echo $this->url ?>News">Voltar</a></center>
+                        <button><a href="index.php">Voltar</a></button>
                         
                         </div>
                         

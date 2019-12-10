@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Out-2019 às 19:11
--- Versão do servidor: 10.3.15-MariaDB
--- versão do PHP: 7.3.6
+-- Tempo de geração: 06-Dez-2019 às 19:18
+-- Versão do servidor: 10.3.16-MariaDB
+-- versão do PHP: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `mvc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `carrinho`
+--
+
+CREATE TABLE `carrinho` (
+  `id` int(11) NOT NULL,
+  `idCliente` int(11) NOT NULL,
+  `idProduto` int(11) NOT NULL,
+  `preco` float NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -67,7 +81,7 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`id`, `nome`, `Snome`, `email`, `cpf`, `cidade`, `estado`, `login`, `senha`) VALUES
 (2, 'cris', 'eu sei', 'crist@gmail.com', 54321, 'passo fundo', 'rs', 'cris@gmail.com', 'cris vai rodar'),
-(0, 'monkey', 'D. luffy', 'cris@gmail.com', 4040, 'livramento', 'rs', 'cris@gmail.com', '123');
+(3, 'Medina', 'sla', 'medina@hotmail.com', 2147483647, 'brasilia', 'mg', 'sla@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -145,25 +159,38 @@ CREATE TABLE `usuarios` (
   `email` varchar(1000) NOT NULL,
   `telefone` int(11) NOT NULL,
   `endereco` varchar(1000) NOT NULL,
-  `senha` varchar(1000) NOT NULL
+  `senha` varchar(1000) NOT NULL,
+  `login` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `telefone`, `endereco`, `senha`) VALUES
-(2, 'medina', 'lucelia.vieiraa@hotmail.com', 33333, 'prado', '123'),
-(3, 'monkey d. luffy', 'cris@gmail.com', 55555, 'prado', 'gomugomu');
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `telefone`, `endereco`, `senha`, `login`) VALUES
+(4, 'cris', 'cris@gmail.com', 443344, 'simon', 'gomugomu', 'cris@gmail.com'),
+(5, 'laranja', 'sla@gmail.com', 33333, 'prado', 'caf1a3dfb505ffed0d024130f58c5cfa', 'cris@gmail.com');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
+-- Índices para tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `categorias`
 --
 ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `cliente`
+--
+ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -183,10 +210,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
@@ -198,7 +237,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
